@@ -1,0 +1,92 @@
+<html>
+
+<head>
+<title>Registration page</title>
+<script>
+    function myFunction() {
+    	var r1 = document.getElementById("r1").value;
+    	
+    	
+        var pw = document.getElementById("pw").value;
+        
+        var cpw= document.getElementById("cpw").value;
+        if (pw != cpw) {
+            window.alert("Passwords Do not match");
+            return false;
+        }
+        else {
+            //window.alert("Passwords Match!!!");
+            return true;
+        }
+    }
+</script>
+<style>
+h1{background:blue;color:white;font-size:50px;border:2px solid yellow;text-align:center;}
+h2{background:blue;color:white;font-size:30px;border:2px solid yellow;text-align:center;}
+body{background:linear-gradient(skyblue,white,skyblue);}
+
+body  {
+  
+  background-color: #cccccc;
+}
+
+
+div
+{
+background-color:green;
+}
+#b1
+{
+background-color:orange;
+}
+
+</style>
+
+</head>
+<body>
+
+<form action="ADMINREG.jsp"  >
+
+<center>
+<h1>ONLINE LEAVING APPLICATION</h1>
+<h2>CREATE ACCOUNT FOR ADMIN</h2><br>
+
+
+
+<table border="0">
+ <tr>
+ <th><b>NAME:</th>
+ <th><input type="text" placeholder="Enter username" name="un"  required></th>
+ </tr>
+
+ 
+ <tr>
+ <th><b>PASSWORD:</th>
+ <th><input type="password" placeholder="Enter password" name="pw" id="pw" required></th>
+ </tr>
+ <br>
+ 
+ <tr>
+<th><b>CONFIRM: <br><b>PASSWORD</b></th>
+<th><h3><input type="password" placeholder="Enter password" name="cpw" id="cpw" required></h3>	</th>
+</tr>
+	
+
+<tr>
+<th><b>EMAIL:</th>
+<th><input type="text" placeholder="Enter email" name="em" id="em" required></th>
+</tr>
+<tr>
+<th><b>MOBILE:</th>
+<th><input type="text" placeholder="Enter mobile number" name="ph" id="ph" required></th>
+</tr>
+<tr>
+<th colspan="2"><input type="submit" id="b1"  value="submit" onclick="return myFunction();">&nbsp
+<input type="reset" value="reset" id="b1">
+</th></tr>
+</table>
+
+</form>
+</center>
+</body>
+</html>
